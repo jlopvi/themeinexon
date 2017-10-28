@@ -2,55 +2,6 @@
       <!-- fiincabecera -->
 
       <!-- Cover -->
-      <div class="container-fluid ieo-category ">
-        <div class="container py-4">
-          <h2 class="ieo-title">Que quieres aprender hoy?</h2>
-          <div class="row">
-
-            <div class="ieo-category-item px-1 col-12 col-sm-6 col-md-4 col-lg-3 my-sm-1">
-              <a href="#" class="ieo-category-link --cat-bo py-3 px-3">
-                <div class="ieo-category-img">
-                  <img class="" src="img/category/binaryoption.jpg" height="70">
-                </div>
-                <h3 class="ieo-category-title px-2">Opciones binarias</h3>
-              </a>
-            </div>
-
-            <div class="ieo-category-item px-1 col-12 col-sm-6 col-md-4 col-lg-3 my-sm-1">
-              <a href="#" class="ieo-category-link --aqua py-3 px-3">
-                <div class="ieo-category-img">
-                  <img class="" src="img/category/binaryoption.jpg" height="70">
-                </div>
-                <h3 class="ieo-category-title px-2">Opciones binarias</h3>
-              </a>
-            </div>
-
-            <div class="ieo-category-item px-1 col-12 col-sm-6 col-md-4 col-lg-3 my-sm-1">
-              <a href="#" class="ieo-category-link --green py-3 px-3">
-                <div class="ieo-category-img">
-                  <img class="" src="img/category/binaryoption.jpg" height="70">
-                </div>
-                <h3 class="ieo-category-title px-2">Opciones binarias</h3>
-              </a>
-            </div>
-            <div class="ieo-category-item px-1 col-12 col-sm-6 col-md-4 col-lg-3 my-sm-1">
-              <a href="#" class="ieo-category-link --blue py-3 px-3">
-                <div class="ieo-category-img">
-                  <img class="" src="img/category/binaryoption.jpg" height="70">
-                </div>
-                <h3 class="ieo-category-title px-2">Opciones binarias</h3>
-              </a>
-            </div>
-
-
-
-
-
-
-          </div>
-        </div>
-      </div>
-
       <!-- finCover -->
 
 
