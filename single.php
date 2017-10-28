@@ -11,8 +11,10 @@ get_header(); ?>
 
 	<div class="container py-3">
 		<div class="row">
+		<?php $postid = '';?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php
+					$postid = get_the_ID();
 					$category = get_the_category();
 					$categoryName = $category[0]->name;
 					$categoryNiceName = $category[0]->category_nicename;
@@ -82,33 +84,60 @@ get_header(); ?>
 				 ?>
 
 				</div>
+				<div class="ieo-post-page py-3 px-2 mt-2">
+				<?php
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+				?>
+				</div>
 			</div>
 			<aside class="col-12 col-sm-3">
-				Publicidad
+				<div class="fake-publi">
+
+				</div>
+				<div >
+					<?php
+					// Default arguments
+					$args = array(
+						'posts_per_page' => 3, // How many items to display
+						'post__not_in'   => array( $postid ), // Exclude current post
+						'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
+					);
+
+					// Check for current post category and add tax_query to the query arguments
+					$cats = wp_get_post_terms( get_the_ID(), 'category' );
+					$cats_ids = array();
+					foreach( $cats as $wpex_related_cat ) {
+						$cats_ids[] = $wpex_related_cat->term_id;
+					}
+					if ( ! empty( $cats_ids ) ) {
+						$args['category__in'] = $cats_ids;
+					}
+
+					// Query posts
+					$wpex_query = new wp_query( $args );
+
+					// Loop through posts
+					foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
+
+						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a>
+
+					<?php
+					// End loop
+					endforeach;
+
+					// Reset post data
+					wp_reset_postdata(); ?>
+				</div>
 			</aside>
 		</div>
 	</div>
 
+	<div class="container">
+
+	</div>
 		<?php
-		// Start the loop.
-		// while ( have_posts() ) : the_post();
-
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			// the_title();
-
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-			// Previous/next post navigation.
-
-
 		// End the loop.
 		endwhile;
 		endif;

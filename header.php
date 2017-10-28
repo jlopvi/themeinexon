@@ -5,12 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <?php wp_head(); ?>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+
   </head>
   <body>
     <div class="ieo-page">
