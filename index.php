@@ -5,7 +5,7 @@
       <div class="container-fluid ieo-category ">
         <div class="container py-4">
           <h2 class="ieo-title">Que quieres aprender hoy?</h2>
-          <div class="row">
+          <div class="row ">
 
             <div class="ieo-category-item px-1 col-12 col-sm-6 col-md-4 col-lg-3 my-sm-1">
               <a href="#" class="ieo-category-link --cat-bo py-3 px-3">
@@ -59,7 +59,7 @@
       <section class="ieo-post container-fluid py-4">
         <div class="container">
           <h2 class="ieo-title">Mira esto lo escribimos hace poco</h2>
-          <div class="row">
+          <div class="row row-eq-height">
 
 
 

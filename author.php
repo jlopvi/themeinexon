@@ -10,7 +10,7 @@
       <section class="ieo-post container-fluid py-4">
         <div class="container">
           <h2 class="ieo-title">Mira esto lo escribimos hace poco</h2>
-          <div class="row">
+          <div class="row align-items-stretch">
 
 
 
